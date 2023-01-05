@@ -1,11 +1,14 @@
 package ua.edu.ucu.apps.adapter.task2;
 
+import lombok.Getter;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 public class TwitterClient implements Client {
     private final TwitterUser user;
+    @Getter
     private List<String> receivedMessages;
 
     public TwitterClient(TwitterUser user) {

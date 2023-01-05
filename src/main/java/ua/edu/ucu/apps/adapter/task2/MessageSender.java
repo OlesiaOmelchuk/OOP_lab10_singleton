@@ -1,10 +1,13 @@
 package ua.edu.ucu.apps.adapter.task2;
 
+import lombok.Getter;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 public class MessageSender {
+    @Getter
     private List<Client> receivers;
 
     public MessageSender(){
@@ -20,7 +23,7 @@ public class MessageSender {
     }
 
     public void send(String text, Client user, Country country){
-        if (user.getCountry() == country.toString() && user.getLastActiveTime() == LocalDate.now()){
+        if (user.getCountry().equals(country.toString()) && user.getLastActiveTime().compareTo(LocalDate.now()) == 0){
             user.receiveMessage(text);
         }
     }

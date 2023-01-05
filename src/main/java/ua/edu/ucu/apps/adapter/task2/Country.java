@@ -1,5 +1,5 @@
 package ua.edu.ucu.apps.adapter.task2;
 
-enum Country {
+public enum Country {
     Ukraine, USA, Poland;
 }

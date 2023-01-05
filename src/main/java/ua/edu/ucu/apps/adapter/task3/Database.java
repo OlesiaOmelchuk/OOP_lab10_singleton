@@ -10,11 +10,11 @@ public class Database {
         this.db = new БазаДаних();
     }
 
-    public void getUserData(){
-        db.отриматиДаніКористувача();
+    public String getUserData(){
+        return db.отриматиДаніКористувача();
     }
 
-    public void getStaticData(){
-        db.отриматиСтатистичніДані();
+    public String  getStaticData(){
+        return db.отриматиСтатистичніДані();
     }
 }

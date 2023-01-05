@@ -1,11 +1,14 @@
 package ua.edu.ucu.apps.adapter.task2;
 
+import lombok.Getter;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 public class FacebookClient implements Client {
     private final FacebookUser user;
+    @Getter
     private List<String> receivedMessages;
 
     public FacebookClient(FacebookUser user) {
