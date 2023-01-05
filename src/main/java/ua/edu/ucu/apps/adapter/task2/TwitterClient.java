@@ -2,7 +2,7 @@ package ua.edu.ucu.apps.adapter.task2;
 
 import java.time.LocalDate;
 
-public class TwitterClient implements Client{
+public class TwitterClient implements Client {
     private final TwitterUser user;
 
     public TwitterClient(TwitterUser user) {
@@ -21,6 +21,6 @@ public class TwitterClient implements Client{
 
     @Override
     public LocalDate getLastActiveTime() {
-        return user.getLastActiveTime();
+        return LocalDate.parse(user.getLastActiveTime());
     }
 }
