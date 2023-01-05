@@ -1,8 +1,8 @@
 package ua.edu.ucu.apps.adapter.task3;
 
 public class ReportBuilder {
-    private БазаДаних db;
-    public ReportBuilder(БазаДаних db) {
+    private Database db;
+    public ReportBuilder(Database db) {
         this.db = db;
     }
 }
