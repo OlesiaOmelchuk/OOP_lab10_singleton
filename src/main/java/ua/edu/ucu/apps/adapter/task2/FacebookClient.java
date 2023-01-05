@@ -1,12 +1,16 @@
 package ua.edu.ucu.apps.adapter.task2;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FacebookClient implements Client {
     private final FacebookUser user;
+    private List<String> receivedMessages;
 
     public FacebookClient(FacebookUser user) {
         this.user = user;
+        this.receivedMessages = new ArrayList<>();
     }
 
     @Override
@@ -22,5 +26,9 @@ public class FacebookClient implements Client {
     @Override
     public LocalDate getLastActiveTime() {
         return user.getGetUserActiveTime();
+    }
+    @Override
+    public void receiveMessage(String text){
+        receivedMessages.add(text);
     }
 }
